@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.nav-item .nav-link {
+    transition: transform 450ms;
+}
+
+.nav-item .nav-link:hover {
+    transform: scale(1.15);
+}
+
+.dropdown-menu .dropdown-item {
+    color: black;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.card-title{
+    font-size: x-large;
+}
+
+
+
+
+
+@media screen and (max-width:1000px) {
+
+    .navbar-nav {
+        gap: 0;
+    }
+
+
+    .nav-item .nav-link:hover {
+        transform: scale(1.01);
+    }
+
+}
