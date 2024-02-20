@@ -13,12 +13,12 @@
     gap: 10px;
 }
 
-div .navbar-brand{
+div .navbar-brand {
     color: white;
     text-align: center
 }
 
-div .navbar-brand:hover{
+div .navbar-brand:hover {
     color: white;
 }
 
@@ -39,85 +39,101 @@ div .navbar-brand:hover{
     color: white;
 }
 
-.card-title{
+.card-title {
     font-size: x-large;
 }
 
-.laptop{
+.laptop {
     margin-top: 100px;
 }
 
-.lappy{
+.lappy {
     margin-top: 60px;
 }
 
-.section1{
+.section1 {
     margin-top: 50px;
 }
 
-.list ol li{
+.list ol li {
     font-weight: bold;
 }
 
-.laptop-brands{
+.laptop-brands {
     text-align: center;
 }
 
-.footer-pic{
-    text-align: center;
-}
 
-.laptop-brands img{
+.laptop-brands img {
     width: 50%;
 }
 
-.laptop-brand-heading{
+.laptop-brand-heading {
     text-align: center;
 }
 
-.laptop-brand-head1{
+.laptop-brand-head1 {
     font-size: xx-large;
 }
-.laptop-brand-head2{
+
+.laptop-brand-head2 {
     font-size: medium;
 }
 
-.list{
+.footer-pic {
+    text-align: center;
+}
+
+.list {
     text-align: justify;
     margin-left: 15%;
     margin-right: 15%;
 }
 
+.laptop-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 
 @media screen and (max-width:1000px) {
-    div .navbar-brand{
+    div .navbar-brand {
         font-size: 17px;
     }
-
-    .navbar-nav {
-        gap: 0;
-    }
-
 
     .nav-item .nav-link:hover {
         transform: scale(1.01);
     }
 
-    .brands {
-        text-align: justify;
-    }
-
-    .display-pic{
+    .laptop-brands img {
         width: 100%;
     }
 
-    .laptop-brands img{
+    .footer-pic img {
         width: 100%;
     }
 
-    .list{
+    .list {
         text-align: justify;
         margin: 0;
+    }
+
+    .laptop-photos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .smg{
+        height:0;
+    }
+
+    .laptop-photos img{
+        transition: transform 500ms;
+    }
+
+    .laptop-photos img:hover{
+        transform: scale(1.05);
     }
 
 }
