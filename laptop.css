@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -13,6 +14,11 @@
 }
 
 div .navbar-brand{
+    color: white;
+    text-align: center
+}
+
+div .navbar-brand:hover{
     color: white;
 }
 
@@ -41,8 +47,46 @@ div .navbar-brand{
     margin-top: 100px;
 }
 
+.lappy{
+    margin-top: 60px;
+}
 
+.section1{
+    margin-top: 50px;
+}
 
+.list ol li{
+    font-weight: bold;
+}
+
+.laptop-brands{
+    text-align: center;
+}
+
+.footer-pic{
+    text-align: center;
+}
+
+.laptop-brands img{
+    width: 50%;
+}
+
+.laptop-brand-heading{
+    text-align: center;
+}
+
+.laptop-brand-head1{
+    font-size: xx-large;
+}
+.laptop-brand-head2{
+    font-size: medium;
+}
+
+.list{
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 15%;
+}
 
 
 @media screen and (max-width:1000px) {
@@ -57,6 +101,23 @@ div .navbar-brand{
 
     .nav-item .nav-link:hover {
         transform: scale(1.01);
+    }
+
+    .brands {
+        text-align: justify;
+    }
+
+    .display-pic{
+        width: 100%;
+    }
+
+    .laptop-brands img{
+        width: 100%;
+    }
+
+    .list{
+        text-align: justify;
+        margin: 0;
     }
 
 }
