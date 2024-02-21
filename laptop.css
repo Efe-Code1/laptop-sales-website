@@ -111,6 +111,46 @@ div .navbar-brand:hover {
     transform: scale(1.03);
 }
 
+.brands{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.samsung{
+    height: 80%;
+}
+
+div .elitebook{
+    height: 80%;
+}
+
+div .img-center{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+div .btn-center{
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}
+
+/* div .glitch{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch{
+    0%{transform:translate(0);}
+    25%{transform:translate(-5px, 5px);}
+    50%{transform:translate(5px, -5px);}
+    75%{transform:translate(-5px, 5px);}
+    100%{transform:translate(0);}
+} */
 
 @media screen and (max-width:1000px) {
     div .navbar-brand {
@@ -136,9 +176,17 @@ div .navbar-brand:hover {
         margin-right: 15px;
     }
 
-    /* .laptop-photos {
-        display: flex;
+    .brands{
         flex-direction: column;
-    } */
+        gap: 40px;
+    }
+
+    div .img-center{
+        width: 80%;
+    }
+    
+    div .btn-center{
+        width: 80%;
+    }
 
 }
