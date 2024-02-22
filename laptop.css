@@ -116,11 +116,7 @@ div .navbar-brand:hover {
     justify-content: space-evenly;
 }
 
-.samsung{
-    height: 80%;
-}
-
-div .elitebook{
+div .resize{
     height: 80%;
 }
 
@@ -128,6 +124,10 @@ div .img-center{
     width: 80%;
     display: block;
     margin: auto;
+}
+
+div .macB{
+    height: 70%;
 }
 
 div .btn-center{
