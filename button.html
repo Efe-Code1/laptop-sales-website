@@ -1,21 +1,145 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
-    button{
-        background-color: dodgerblue;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 10px;
+    input {
+        width: 65.5px;
+        outline: none;
+        padding: 10px;
+        outline: 1px solid black;
         border: none;
+        text-align: center;
+    }
+
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+        display: none;
+    }
+
+
+
+    /* input::placeholder {
+        color: red;
+    } */
+
+    button {
+        display: block;
+        margin-top: 10px;
+        padding: 10px;
     }
 </style>
-<body>
 
-    <button>Search</button>
-    
+<body>
+    <input type="number" placeholder="DAY">
+    <button>Submit</button>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <!-- <button>Search</button> -->
+    <script>
+        var p = document.getElementsByTagName('p')[0]
+        var p2 = document.getElementsByTagName('p')[1]
+        var p3 = document.getElementsByTagName('p')[2]
+        var p4 = document.getElementsByTagName('p')[3]
+        var p5 = document.getElementsByTagName('p')[4]
+        var p6 = document.getElementsByTagName('p')[5]
+
+        var today = new Date()
+        p.innerHTML = "Today: " + today.toLocaleString()
+
+        var bd = new Date()
+        bd.setDate(15)
+        bd.setMonth(6)
+        bd.setFullYear(2001)
+        bd.setHours(0)
+        bd.setMinutes(0)
+        bd.setSeconds(0)
+        p2.innerHTML = "day u were born: " + bd.toLocaleString()
+
+        p3.innerHTML = today.getTime().toLocaleString() + ' ms'
+        p4.innerHTML = bd.getTime().toLocaleString() + ' ms'
+
+        p5.innerHTML = parseInt(today.getTime() - bd.getTime()).toLocaleString() + ' ms'
+        var bdt = new Date(parseInt(today.getTime() - bd.getTime()))
+        bdt.setFullYear(parseInt(bdt.getFullYear()) - 1970)
+        p6.innerHTML = bdt.toLocaleString()
+
+        function name() {
+            var today = new Date()
+
+            var bd = new Date()
+            bd.setDate(28)
+            bd.setMonth(1)
+            bd.setFullYear(2002)
+            bd.setHours(0)
+            bd.setMinutes(0)
+            bd.setSeconds(0)
+
+            var bdt = new Date(parseInt(today.getTime() - bd.getTime()))
+            bdt.setFullYear(parseInt(bdt.getFullYear()) - 1970)
+
+            p6.innerHTML = bdt.getFullYear() + ' years<br>'
+                + bdt.getMonth() + ' months<br>'
+                + (bdt.getDate() - 1) + ' days<br>'
+                + bdt.getHours() + ' hours<br>'
+                + bdt.getMinutes() + ' mins<br>'
+                + bdt.getSeconds() + ' seconds'
+            requestAnimationFrame(name)
+        }
+
+
+        // function name() {
+        //     var today = new Date()
+        //     p.innerHTML = today.getTime().toLocaleString()
+        //     requestAnimationFrame(name) 
+        // }
+        name()
+
+        // var today = new Date()
+        // p.innerHTML = today
+        // p.innerHTML = today.get
+
+
+
+        var day = document.querySelector('input')
+        var but = document.getElementsByTagName('button')[0]
+
+        but.onclick = (event) => {
+            if (parseInt(day.value) > 31 ||
+                parseInt(day.value) < 1 ||
+                day.value == '') {
+                efe()
+            }
+        }
+
+        day.oninput = () => {
+            if (parseInt(day.value) > 31 || parseInt(day.value) < 1) {
+                day.blur()
+                day.value = ''
+                efe()
+            }
+        }
+
+        day.onfocus = () => {
+            obaro()
+        }
+
+        function efe() {
+            day.style.outline = '2px solid red'
+            day.setAttribute('placeholder', '1-31')
+        }
+        function obaro() {
+            day.style.outline = '1px solid black'
+            day.setAttribute('placeholder', '1-31')
+        }
+    </script>
 </body>
+
 </html>

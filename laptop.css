@@ -84,10 +84,6 @@ div .navbar-brand:hover {
     font-size: smaller;
 }
 
-.footer-pic {
-    text-align: center;
-}
-
 .list {
     text-align: justify;
     margin-left: 15%;
@@ -95,15 +91,19 @@ div .navbar-brand:hover {
 }
 
 .laptop-photos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    gap: 20px;
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 
-.lp{
-    height: 100%;
+::-webkit-scrollbar{
+    display: none;
 }
 
-.laptop-photos img{
+div .laptop-photos img{
+    width: 300px;
+    height: 200px;
     transition: transform 500ms;
 }
 
@@ -137,20 +137,15 @@ div .btn-center{
     margin-top: 15px;
 }
 
-/* div .glitch{
-    position: relative;
-    text-align: center;
-    display: inline-block;
-    animation: glitch 1s infinite;
+.footer{
+    background-color: #faf4f4;
 }
 
-@keyframes glitch{
-    0%{transform:translate(0);}
-    25%{transform:translate(-5px, 5px);}
-    50%{transform:translate(5px, -5px);}
-    75%{transform:translate(-5px, 5px);}
-    100%{transform:translate(0);}
-} */
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+}
 
 @media screen and (max-width:1000px) {
     div .navbar-brand {
@@ -162,10 +157,6 @@ div .btn-center{
     }
 
     .laptop-brands img {
-        width: 100%;
-    }
-
-    .footer-pic img {
         width: 100%;
     }
 
@@ -187,6 +178,12 @@ div .btn-center{
     
     div .btn-center{
         width: 80%;
+    }
+
+    .socials{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 30px;
     }
 
 }
